@@ -26,10 +26,10 @@ def weighted_log_odds_dirichlet(document1, document2, ngram=1, prior=.01, cv=Non
     counts_mat = cv.fit_transform(document1 + document2).toarray()
     vocab_size = len(cv.vocabulary_)
     if type(prior) is float:
-        priors = np.array([prior for i in range(vocab_size)])
+        priors = np.array([prior] * vocab_size)
     else:
         priors = prior
-    z_scores = np.empty(priors.shape[0])
+    z_scores = np.empty(np.array(priors).shape[0])
     count_matrix = np.empty([2, vocab_size], dtype=np.float32)
     count_matrix[0, :] = np.sum(counts_mat[:len(document1), :], axis=0)
     count_matrix[1, :] = np.sum(counts_mat[len(document1):, :], axis=0)
