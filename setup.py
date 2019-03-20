@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='fightin_words',
-      version='0.1',
+      version='0.2',
       description='Implementation of Monroe et al., 2008.',
       url='https://github.com/Wigder/fightin_words',
       author='Pedro Wigderowitz/Jack Hessel',
