@@ -28,7 +28,7 @@ from fightin_words import weighted_log_odds_dirichlet
 from sklearn.feature_extraction.text import CountVectorizer
 
 doc1 = ["the quick brown fox jumps over the lazy pig"]
-doc2 = ["the lazy purple pig jumps over the " + (1000 * "very ") + " sleepy donkey"]
+doc2 = ["the lazy purple pig jumps over the " + (1000 * "very ") + "sleepy donkey"]
 uninformed_prior = .05
 
 word_count = dict(Counter((doc1[0] + " " + doc2[0]).split()).most_common())
