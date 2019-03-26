@@ -48,16 +48,17 @@ for w, p in priors.items():
 uninformed_out = weighted_log_odds_dirichlet(doc1, doc2, prior=uninformed_prior, cv=CountVectorizer())
 informed_out = weighted_log_odds_dirichlet(doc1, doc2, prior=prior, cv=CountVectorizer(vocabulary=cv_vocab))
 
-expected_uninformed_out = [('very', -2.2144429606255946), ('donkey', 0.3528670051726073),
-                           ('purple', 0.3528670051726073), ('sleepy', 0.3528670051726073),
-                           ('brown', 1.7074955767167836), ('fox', 1.7074955767167836), ('quick', 1.7074955767167836),
-                           ('jumps', 3.4564380059373603), ('lazy', 3.4564380059373603), ('over', 3.4564380059373603),
-                           ('pig', 3.4564380059373603), ('the', 4.954523357120953)]
-expected_informed_out = [('very', -0.4368846171934332), ('purple', 0.3539801999989518), ('sleepy', 0.3539801999989518),
-                         ('donkey', 0.3539801999989518), ('quick', 1.7087406001344665), ('brown', 1.7087406001344665),
-                         ('fox', 1.7087406001344665), ('jumps', 3.4605672465974453), ('over', 3.4605672465974453),
-                         ('lazy', 3.4605672465974453), ('pig', 3.4605672465974453), ('the', 4.961066225017743)]
-
+# expected_uninformed_out = [('very', -2.2144429606255946), ('donkey', 0.3528670051726073),
+#                            ('purple', 0.3528670051726073), ('sleepy', 0.3528670051726073),
+#                            ('brown', 1.7074955767167836), ('fox', 1.7074955767167836), ('quick', 1.7074955767167836),
+#                            ('jumps', 3.4564380059373603), ('lazy', 3.4564380059373603), ('over', 3.4564380059373603),
+#                            ('pig', 3.4564380059373603), ('the', 4.954523357120953)]
+# expected_informed_out = [('very', -0.4368846171934332), ('purple', 0.3539801999989518),
+#                          ('sleepy', 0.3539801999989518), ('donkey', 0.3539801999989518), ('quick', 1.7087406001344665),
+#                          ('brown', 1.7087406001344665), ('fox', 1.7087406001344665), ('jumps', 3.4605672465974453),
+#                          ('over', 3.4605672465974453), ('lazy', 3.4605672465974453), ('pig', 3.4605672465974453),
+#                          ('the', 4.961066225017743)]
+# 
 # print(dict(uninformed_out) == dict(expected_uninformed_out))
 # print(dict(informed_out) == dict(expected_informed_out))
 ```
