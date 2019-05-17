@@ -85,7 +85,7 @@ References
 ---
 J. Hessel, “Fightin’ Words,” GitHub, 2016. [Online]. Available: https://github.com/jmhessel/FightingWords. [Accessed: 26-Apr-2019].
 
-B. L. Monroe et al., “Fightin’ Words: Lexical Feature Selection and Evaluation for Identifying the Content of Political Conflic,” Polit. Anal., vol. 16, no. 4, pp. 372–403, 2008.
+B. L. Monroe et al., “Fightin’ Words: Lexical Feature Selection and Evaluation for Identifying the Content of Political Conflict,” Polit. Anal., vol. 16, no. 4, pp. 372–403, 2008.
 
 Citation
 ---
