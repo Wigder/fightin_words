@@ -1,4 +1,16 @@
 # fightin_words
+A packaged Python 3 implementation of the weighted log-odds-ratio method from Monroe et al., 2008. This code was based on Jack Hessel's original Python 2 script. See references section for more details.  
+
+Dependencies
+---
+scikit-learn
+
+Installing
+---
+Clone the repository, and from the directory under which root folder is located, run:
+```
+pip install fightin_words
+```
 
 Usage
 ---
@@ -62,3 +74,21 @@ informed_out = weighted_log_odds_dirichlet(doc1, doc2, prior=prior, cv=CountVect
 # print(dict(uninformed_out) == dict(expected_uninformed_out))
 # print(dict(informed_out) == dict(expected_informed_out))
 ```
+
+Known Issues
+---
+Due to apparent limitations within the backend of the dependencies, intermediate matricial operations take up memory at a very high spatial complexity, meaning that massive amounts of memory may be required to successfully complete the execution of code, depending on the size of the dataset being used.  
+
+References
+---
+J. Hessel, “Fightin’ Words,” GitHub, 2016. [Online]. Available: https://github.com/jmhessel/FightingWords. [Accessed: 26-Apr-2019].
+
+B. L. Monroe et al., “Fightin’ Words: Lexical Feature Selection and Evaluation for Identifying the Content of Political Conflic,” Polit. Anal., vol. 16, no. 4, pp. 372–403, 2008.
+
+Citation
+---
+P. H. M. Wigderowitz, “fightin_words,” GitHub, 2019. [Online]. Available: https://github.com/Wigder/fightin_words. [Accessed: XX-XXX-XXXX]. doi:
+
+License
+---
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

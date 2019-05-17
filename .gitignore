@@ -172,11 +172,3 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
-
-
-#
-#	Custom
-#
-
-# Google Drive files
-desktop.ini
