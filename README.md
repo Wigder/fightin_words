@@ -1,13 +1,7 @@
 [![DOI](https://zenodo.org/badge/175908432.svg)](https://zenodo.org/badge/latestdoi/175908432)
 
 # fightin_words
-A packaged Python 3 implementation of the weighted log-odds-ratio method from Monroe et al., 2008. This code was based on Jack Hessel's original Python 2 script. See references section for more details.  
-
-Dependencies
----
-numpy
-
-scikit-learn
+A packaged Python 3 implementation of the weighted log-odds-ratio method from Monroe et al., 2008. This code was based on Jack Hessel's original Python 2 script. See references section for more details.
 
 Installing
 ---
