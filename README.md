@@ -5,6 +5,8 @@ A packaged Python 3 implementation of the weighted log-odds-ratio method from Mo
 
 Dependencies
 ---
+numpy
+
 scikit-learn
 
 Installing
@@ -19,8 +21,8 @@ Usage
 Uninformed example:
     
 ```python
-from sklearn.feature_extraction.text import CountVectorizer
 from fightin_words import weighted_log_odds_dirichlet
+from sklearn.feature_extraction.text import CountVectorizer
 
 doc1 = ["the quick brown fox jumps over the lazy pig"]
 doc2 = ["the lazy purple pig jumps over the lazier donkey"]
@@ -81,7 +83,7 @@ Known Issues
 ---
 Due to apparent limitations within the backend of the dependencies, intermediate matricial operations take up memory at a very high spatial complexity, meaning that massive amounts of memory may be required to successfully complete the execution of code, depending on the size of the dataset being used.  
 
-References
+Bibliography
 ---
 J. Hessel, “Fightin’ Words,” GitHub, 2016. [Online]. Available: https://github.com/jmhessel/FightingWords. [Accessed: 26-Apr-2019].
 

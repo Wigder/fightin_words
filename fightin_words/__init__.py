@@ -5,23 +5,22 @@ from sklearn.feature_extraction.text import CountVectorizer
 def weighted_log_odds_dirichlet(document1, document2, ngram=1, prior=.01, cv=None):
     """
     Arguments:
-    - l1, l2; a list of strings from each language sample
+    - document1, document2; a list of strings from each sample.
     - ngram; an int describing up to what n gram you want to consider (1 is unigrams,
-    2 is bigrams + unigrams, etc). Ignored if a custom CountVectorizer is passed.
+        2 is bigrams + unigrams, etc). Ignored if a custom CountVectorizer is passed.
     - prior; either a float describing a uniform prior, or a vector describing a prior
-    over vocabulary items. If you're using a predefined vocabulary, make sure to specify that
-    when you make your CountVectorizer object.
-    - cv; a sklearn.feature_extraction.text.CountVectorizer object, if desired.
+        over vocabulary items. If a predefined vocabulary is being used, make sure to
+        specify that when making your CountVectorizer object.
+    - cv; an sklearn.feature_extraction.text.CountVectorizer object, if necessary.
 
     Returns:
-    - A list of length |Vocab| where each entry is a (n-gram, zscore) tuple.
+    - A list of length equal to the amount of vocabulary, where each entry is an (n-gram, zscore) tuple.
     """
     if cv is None and type(prior) is not float:
-        print("If using a non-uniform prior, please also pass a count vectorizer with the vocabulary parameter set.")
-        quit()
+        raise TypeError("If using a non-uniform prior, a CountVectorizer object with the "
+                        "vocabulary parameter set needs to be passed as the cv argument.")
     if cv is None:
-        cv = CountVectorizer(decode_error='ignore', min_df=10, max_df=.5, ngram_range=(1, ngram),
-                             binary=False,
+        cv = CountVectorizer(decode_error='ignore', min_df=10, max_df=.5, ngram_range=(1, ngram), binary=False,
                              max_features=15000)
     counts_mat = cv.fit_transform(document1 + document2).toarray()
     vocab_size = len(cv.vocabulary_)
