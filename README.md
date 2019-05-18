@@ -22,10 +22,12 @@ doc1 = ["the quick brown fox jumps over the lazy pig"]
 doc2 = ["the lazy purple pig jumps over the lazier donkey"]
 
 out = weighted_log_odds_dirichlet(doc1, doc2, prior=.05, cv=CountVectorizer())
-expected_out = [("donkey", -0.6894227886807968), ("lazier", -0.6894227886807968), ("purple", -0.6894227886807968),
-                ("jumps", 0.0), ("lazy", 0.0), ("over", 0.0), ("pig", 0.0), ("the", 0.0), ("brown", 0.6894227886807968),
-                ("fox", 0.6894227886807968), ("quick", 0.6894227886807968)]
 
+print(dict(out))
+
+# expected_out = [("donkey", -0.6894227886807968), ("lazier", -0.6894227886807968), ("purple", -0.6894227886807968),
+#                 ("jumps", 0.0), ("lazy", 0.0), ("over", 0.0), ("pig", 0.0), ("the", 0.0), ("brown", 0.6894227886807968),
+#                 ("fox", 0.6894227886807968), ("quick", 0.6894227886807968)]
 # print(dict(out) == dict(expected_out))
 ```
 
@@ -57,6 +59,9 @@ for w, p in priors.items():
 
 uninformed_out = weighted_log_odds_dirichlet(doc1, doc2, prior=uninformed_prior, cv=CountVectorizer())
 informed_out = weighted_log_odds_dirichlet(doc1, doc2, prior=prior, cv=CountVectorizer(vocabulary=cv_vocab))
+
+print(dict(uninformed_out))
+print(dict(informed_out))
 
 # expected_uninformed_out = [('very', -2.2144429606255946), ('donkey', 0.3528670051726073),
 #                            ('purple', 0.3528670051726073), ('sleepy', 0.3528670051726073),
