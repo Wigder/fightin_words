@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2932643.svg)](https://doi.org/10.5281/zenodo.2932643)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2933118.svg)](https://doi.org/10.5281/zenodo.2933118)
 
 # fightin_words
 A packaged Python 3 implementation of the weighted log-odds-ratio method from Monroe et al., 2008. This code was based on Jack Hessel's original Python 2 script. See references section for more details.
@@ -90,7 +90,7 @@ B. L. Monroe et al., “Fightin’ Words: Lexical Feature Selection and Evaluati
 
 Citation
 ---
-P. H. M. Wigderowitz, “fightin_words,” GitHub, 2019. [Online]. Available: https://github.com/Wigder/fightin_words. [Accessed: XX-XXX-XXXX]. DOI: 10.5281/zenodo.2932643.
+P. H. M. Wigderowitz, “fightin_words,” GitHub, 2019. [Online]. Available: https://github.com/Wigder/fightin_words. [Accessed: XX-XXX-XXXX]. DOI: 10.5281/zenodo.2933118.
 
 License
 ---
